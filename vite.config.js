@@ -10,6 +10,7 @@ export default defineConfig({
                 contact:resolve(__dirname,"contact.html"),
                 product:resolve(__dirname,"product.html"),
                 addToCard:resolve(__dirname,"addToCard.html"),
+
             },
         },
     },
