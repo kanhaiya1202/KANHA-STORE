@@ -27,7 +27,7 @@ export const showProductContainer = (product) =>{
         productClone.querySelector(".productStock").textContent = stock;
         productClone.querySelector(".productDescription").textContent = description;
         productClone.querySelector(".productPrice").textContent = `₹${price}`
-        productClone.querySelector(".productActualPrice").textContent = `₹${price * 4}`
+        productClone.querySelector(".productActualPrice").textContent = `₹${price * 2}`
 
         productClone.querySelector(".stockElement").addEventListener("click",(event) =>{
             homeQuantityToggle(event,id ,stock);
