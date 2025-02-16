@@ -56,14 +56,12 @@
 
 {
     "id":6,
-    "name": "Televisionop",
-    "catagory":"Video",
-    "brand": "HP",
-    "price":999.99,
-    "stock":50,
-    "description":"Smartwatch with a 1.3-inch AMOLED display, water-resistant design, fitness tracking features, and a stylish silver color.",
-    "image":"tv.png"
+    "name": "Audio",
+    "catagory":"Speaker",
+    "brand": "boAt",
+    "price":599.99,
+    "stock":20,
+    "description":"boAt Stone 358 10W Portable Bluetooth Speaker",
+    "image":"section img2.jpeg"
 }
-
-
 ]
