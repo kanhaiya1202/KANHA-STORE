@@ -6,7 +6,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image":"./public/section img1.webp"
+    "image":"./dish/public/section img1.webp"
 
 },
 
@@ -18,7 +18,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image":"./public/section img2.jpeg"
+    "image":"./dish/public/section img2.jpeg"
 },
 
 {
@@ -29,7 +29,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image":"./public/section img3.jpeg"
+    "image":"./dish/public/section img3.jpeg"
 },
 
 {
@@ -40,7 +40,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image":"./public/section img4.jpeg"
+    "image":"./dish/public/section img4.jpeg"
 },
 
 {
@@ -51,7 +51,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image":"./public/section img5.jpeg"
+    "image":"./dish/public/section img5.jpeg"
 },
 
 {
@@ -62,7 +62,7 @@
     "price":999.99,
     "stock":50,
     "description":"nice product plz buy",
-    "image": "./public/section img1.webp"
+    "image": "./dish/public/section img1.webp"
 }
 
 
