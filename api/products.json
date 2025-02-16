@@ -1,0 +1,69 @@
+[{
+    "id":1,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image":"./dist/public/section img1.webp"
+
+},
+
+{
+    "id":2,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image":"./dist/public/section img2.jpeg"
+},
+
+{
+    "id":3,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image":"./dist/public/section img3.jpeg"
+},
+
+{
+    "id":4,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image":"./dist/public/section img4.jpeg"
+},
+
+{
+    "id":5,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image":"./dist/public/section img5.jpeg"
+},
+
+{
+    "id":6,
+    "name": "laptop",
+    "catagory":"Computers",
+    "brand": "HP",
+    "price":999.99,
+    "stock":50,
+    "description":"nice product plz buy",
+    "image": "./dist/public/section img1.webp"
+}
+
+
+]

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KANHA-STORE</title>
+  <link rel="icon" href="./public/icone-kanha-store.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+        <div class="head_txt">
+          <p>free Shipping, 30-day return ot refund guarantee</p>
+        </div>
+        <div class="sing_in_up">
+          <a href="./sing_in.html">SING IN</a>
+          <a href="./sing_up.html">SING UP</a>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="#">
+          <img src="./public/Screenshot 2025-02-12 092542.png" class="logo" alt="" >
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="./home.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link">About</a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Product</a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link">contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="./addToCard.html" class="nav-link add-to-cart-button" id="cartValue">
+              <i class="fa-solid fa-cart-shopping"> 0 </i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+   <!-- start hero section -->
+
+  <section class="section-extra-product">
+    <div class="container grid grid-three--cols">
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year Sale</p>
+          <h3>get and extra 50% off</h3>
+          <a href="">show now</a>
+        </div>
+        <div class="extra-image extra-laptop">
+          <img src="./public/section img 6.jpeg" alt="">
+        </div>
+      </div>
+      
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year Sale</p>
+          <h3>get and extra 50% off</h3>
+          <a href="">show now</a>
+        </div>
+        <div class="extra-image extra-laptop">
+          <img src="./public/section img1.webp" alt="">
+        </div>
+      </div>
+      <div class="div-extra grid grid-two--cols">
+        <div class="extra-text">
+          <p>new year Sale</p>
+          <h3>get and extra 50% off</h3>
+          <a href="">show now</a>
+        </div>
+        <div class="extra-image extra-laptop">
+          <img src="./public/section img2.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="section-policy">
+  <div class="container grid grid-four--cols">
+    <div class="div-policy">
+      <div class="icons">
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+      <div class="div-policy-text">
+        <p>worldwide shipping</p>
+        <p>order above $100</p>
+      </div>
+    </div>
+    <div class="div-policy">
+      <div class="icons">
+        <i class="fa-solid fa-rotate"></i>
+      </div>
+      <div class="div-policy-text">
+        <p>worldwide shipping</p>
+        <p>order above $100</p>
+      </div>
+    </div>
+    <div class="div-policy">
+      <div class="icons">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+      </div>
+      <div class="div-policy-text">
+        <p>worldwide shipping</p>
+        <p>order above $100</p>
+      </div>
+    </div>
+    <div class="div-policy">
+      <div class="icons">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+      <div class="div-policy-text">
+        <p>worldwide shipping</p>
+        <p>order above $100</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- end hero section -->
+
+  <section class="section-products">
+    <div class="container">
+      <h2 class="section-common--heading">Checkout KANHA-STORE</h2>
+    </div>
+    <section class="container">
+      <div id="productContainer">
+
+      </div>
+    </section>
+  </section>
+<!-- product template -->
+  <template id="productTemplate">
+    <div class="cards" id="cardValue">
+      <article class="information [card]">
+        <span class="category"></span>
+        <div class="imageContainer">
+          <img class="productImage" src="" alt="">
+        </div>
+        <h2 class="productName"></h2>
+        <div class="productRating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="productDescription"></p>
+        <div class="productPriceElement">
+          <p class="productPrice"></p>
+          <p class="productActualPrice"></p>
+        </div>
+        <div class="productStockElement">
+          <p class="productProperty">Total Stock Available:</p>
+          <p class="productStock"></p>
+        </div>
+        <div class="productQuantityElement">
+          <p class="productProperty">Quantity(pices)</p>
+          <div class="stockElement">
+            <button class="cartIncreament">+</button>
+            <p class="productQuantity">1</p>
+            <button class="cartDecrement">-</button>
+
+          </div>
+        </div>
+        <button class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping">Add To Cart</i>
+        </button>
+      </article>
+    </div>
+  </template>   
+  <footer class="section-footer">
+    <div class="footer-container container">
+        <div class="content_1">
+            <img src="./public/Screenshot 2025-02-12 092542.png " alt="logo">
+            <p>
+              Welcome to KANHA-STORE and buy product
+            </p>
+            <img src="./public/payment-method-c454fb.svg" alt="card">
+        </div>
+        <div class="conten_2">
+            <h4>SOPPING</h4>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+        </div>
+
+        <div class="content_3">
+            <h4>EXPRIENCE</h4>
+            <a href=".contact.html">Contact Us</a>
+            <a href="" target="_blank">patment Method</a>
+            <a href="" target="_blank">Delivery</a>
+            <a href="" target="_blank">return and Exchange</a>
+        </div>
+        <div class="content_4">
+            <h4>NEWSLETTER</h4>
+            <P>Be the first know about new <br/>arrivals, Sales & promos!</P>
+            <div class="f-mail">
+                <input type="email" placeholder="Your Email">
+                <i class="bx bx envelope"></i>
+            </div>
+            <hr/>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Welcome to KANHA-STORE</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

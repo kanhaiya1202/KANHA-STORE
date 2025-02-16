@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KANHA-STORE</title>
+  <link rel="icon" href="./public/icone-kanha-store.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- header  -->
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+        <div class="head_txt">
+          <p>free Shipping, 30-day return ot refund guarantee</p>
+        </div>
+        <div class="sing_in_up">
+          <a href="#">SING IN</a>
+          <a href="#">SING UP</a>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="#">
+          <img src="./public/Screenshot 2025-02-12 092542.png" class="logo" alt="" >
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">About</a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">Product</a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="/" class="nav-link">contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="./addToCard.html" class="nav-link add-to-cart-button" id="cartValue">
+              <i class="fa-solid fa-cart-shopping"> 0 </i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <!-- <section class="addToCartElement">
+    <div class="container">
+        <section>
+            <div id="productCartContainer">
+
+            </div>
+        </section>
+        <section class="productCartTotalElem">
+            <div class="productCartTotalElement">
+                <p>Selected Offer Summery</p>
+                <div class="productOrderTotal">
+                    <div>
+                        <p>Sub Total:</p>
+                        <p class="productSubTotal">0</p>
+                    </div>
+                    <div>
+                        <p>Tax:</p>
+                        <p class="productTax">₹50</p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p>Final Order:</p>
+                        <p class="productFinalTotal">0</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+  </section>
+
+  <template id="productCartTemplate">
+    <div class="cards" id="cardValue">
+        <article class="information [card]">
+            <div>
+                <span class="category"></span>
+            </div>
+            <div class="imageContainer">
+                <img class="productImage" src="" alt="">
+            </div>
+            <h2 class="productName"></h2>
+            <p class="productPrice"></p>
+            <div class="stockElement">
+                <button class="cartIncrement">+</button>
+                <p class="productQuantity" data-quantity = "1">1</p>
+                <button class="cartDecrement">-</button>
+            </div>
+
+            <button class="add-to-cart-button remove-to-cart-button">Remove</button>
+        </article>
+    </div>
+  </template> -->
+
+
+  <section class="addToCartElement">
+    <div class="container">
+        <section>
+            <div id="productCartContainerks"></div>
+        </section>
+        <section class="productCartTotalElem">
+            <div class="productCartTotalElement">
+                <p>Selected Offer Summery</p>
+                <div class="productOrderTotal">
+                    <div>
+                        <p>Sub Total:</p>
+                        <p class="productSubTotal">0</p>
+                    </div>
+                    <div>
+                        <p>Tax:</p>
+                        <p class="productTax">₹50</p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p>Final Order:</p>
+                        <p class="productFinalTotal">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+  </section>
+
+<template id="productCartTemplate">
+    <div class="cards" id="cardValue">
+        <article class="information [card]">
+            <div>
+                <span class="category"></span>
+            </div>
+            <div class="imageContainer">
+                <img class="productImage" src="" alt="">
+            </div>
+            <h2 class="productName"></h2>
+            <p class="productPrice"></p>
+            <div class="stockElement">
+                <button class="cartIncrement">+</button>
+                <p class="productQuantity" data-quantity = "1">1</p>
+                <button class="cartDecrement">-</button>
+            </div>
+
+            <button class="add-to-cart-button remove-to-cart-button">Remove</button>
+        </article>
+    </div>
+</template> 
+   
+
+    <!-- footer -->
+
+  <footer class="section-footer">
+    <div class="footer-container container">
+        <div class="content_1">
+            <img src="./public/Screenshot 2025-02-12 092542.png " alt="logo">
+            <p>
+                Welcome to KANHA-STORE and buy product
+            </p>
+            <img src="./public/payment-method-c454fb.svg" alt="card">
+        </div>
+        <div class="conten_2">
+            <h4>|SOPPING|</h4>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+            <a href="#">computer store</a>
+        </div>
+
+        <div class="content_3">
+            <h4>|EXPRIENCE|</h4>
+            <a href=".contact.html">Contact Us</a>
+            <a href="" target="_blank">patment Method</a>
+            <a href="" target="_blank">Delivery</a>
+            <a href="" target="_blank">return and Exchange</a>
+        </div>
+        <div class="content_4">
+            <h4>|NEWSLETTER|</h4>
+            <P>Be the first know about new <br/>arrivals, Sales & promos!</P>
+            <div class="f-mail">
+                <input type="email" placeholder="Your Email">
+                <i class="bx bx envelope"></i>
+            </div>
+            <hr/>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Welcome to KANHA-STORE</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+<script type="module" src="./src/showAddToCard.js"></script>
+</body>
