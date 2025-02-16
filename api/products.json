@@ -6,7 +6,7 @@
     "price":29999.99,
     "stock":50,
     "description":"Powerful laptop with a quad-core i5 processor 8GB RAM, 256GB SSD, and a 14-inch FHD Display",
-    "image":"../public/lapi.png"
+    "image":"lapi.png"
 
 },
 
