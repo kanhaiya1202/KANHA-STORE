@@ -1,7 +1,7 @@
 const footerHTML = `<footer class="section-footer">
     <div class="footer-container container">
         <div class="content_1">
-            <img src="./public/Screenshot 2025-02-12 092542.png " alt="logo">
+            <img src=".kanha-shore.png" alt="logo">
             <p>
               Welcome to KANHA-STORE and buy product
             </p>
