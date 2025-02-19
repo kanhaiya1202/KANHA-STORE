@@ -56,8 +56,8 @@
 
 {
     "id":6,
-    "name": "Audio",
-    "catagory":"Speaker",
+    "name": "Speaker",
+    "catagory":"Audio",
     "brand": "boAt",
     "price":599.99,
     "stock":20,
