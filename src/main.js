@@ -8,6 +8,5 @@ import { showProductContainer } from "./homeProductCard";
 showProductContainer(products);
 
 
-  
-
+ 
 
