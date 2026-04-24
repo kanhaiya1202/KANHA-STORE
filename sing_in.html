@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In – KANHA-STORE</title>
+  <link rel="icon" href="./public/icone-kanha-store.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Jost:wght@700;800&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --main:     #535bf2;
+      --dark:     #2a2c30;
+      --bg:       #f7f7f7;
+      --white:    #ffffff;
+      --border:   #e3eaf0;
+      --text:     #1e1f23;
+      --muted:    #8c9299;
+      --error:    #e53e3e;
+      --success:  #38a169;
+    }
+
+    html { font-size: 62.5%; }
+
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Navbar ── */
+    .navbar-top {
+      background: var(--dark);
+      padding: 0.8rem 3.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar-top p { font-size: 1.3rem; color: #ccc; }
+    .navbar-top a { font-size: 1.3rem; color: #ccc; text-decoration: none; }
+    .navbar-top a:hover { color: #fff; }
+
+    .navbar-main {
+      background: #fff;
+      padding: 1.6rem 3.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .navbar-main img { height: 3.6rem; width: auto; }
+    .navbar-main nav a {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 2.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+    }
+    .navbar-main nav a:hover { color: var(--main); }
+
+    /* ── Page layout ── */
+    .page-wrapper {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 10rem);
+    }
+
+    /* ── Left panel ── */
+    .left-panel {
+      background: linear-gradient(135deg, #3d86fa 0%, #535bf2 50%, #2a2c30 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6.4rem 4.8rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .left-panel::before {
+      content: '';
+      position: absolute;
+      width: 40rem;
+      height: 40rem;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      top: -10rem;
+      right: -10rem;
+    }
+    .left-panel::after {
+      content: '';
+      position: absolute;
+      width: 25rem;
+      height: 25rem;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      bottom: -5rem;
+      left: -5rem;
+    }
+    .left-content { position: relative; z-index: 1; text-align: center; color: #fff; }
+    .left-content .brand { font-family: 'Jost', sans-serif; font-size: 3.6rem; font-weight: 800; letter-spacing: -0.1rem; margin-bottom: 1.2rem; }
+    .left-content p { font-size: 1.6rem; opacity: 0.85; line-height: 1.7; margin-bottom: 3.2rem; }
+    .left-features { list-style: none; text-align: left; }
+    .left-features li {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .left-features li i { color: #a8f0c6; font-size: 1.4rem; }
+
+    /* ── Right panel / Form ── */
+    .right-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4.8rem 3.2rem;
+      background: #fff;
+    }
+    .form-card { width: 100%; max-width: 44rem; }
+    .form-card h1 {
+      font-family: 'Jost', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+    .form-card .subtitle {
+      font-size: 1.5rem;
+      color: var(--muted);
+      margin-bottom: 3.6rem;
+    }
+    .form-card .subtitle a { color: var(--main); font-weight: 600; text-decoration: none; }
+    .form-card .subtitle a:hover { text-decoration: underline; }
+
+    /* ── Form elements ── */
+    .form-group { margin-bottom: 2rem; }
+    .form-group label {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+    .input-wrap { position: relative; }
+    .input-wrap i {
+      position: absolute;
+      left: 1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1.5rem;
+    }
+    .input-wrap input {
+      width: 100%;
+      padding: 1.4rem 1.4rem 1.4rem 4.4rem;
+      font-size: 1.5rem;
+      font-family: 'Urbanist', sans-serif;
+      border: 0.15rem solid var(--border);
+      border-radius: 0.8rem;
+      background: var(--bg);
+      color: var(--text);
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .input-wrap input:focus {
+      border-color: var(--main);
+      box-shadow: 0 0 0 3px rgba(83,91,242,0.12);
+      background: #fff;
+    }
+    .input-wrap .toggle-pass {
+      position: absolute;
+      right: 1.4rem;
+      top: 50%;
+      transform: translateY(-50%);
+      left: auto;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .input-wrap .toggle-pass:hover { color: var(--main); }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.4rem;
+      font-size: 1.4rem;
+    }
+    .remember-me { display: flex; align-items: center; gap: 0.8rem; cursor: pointer; color: var(--text); }
+    .remember-me input[type="checkbox"] { width: 1.6rem; height: 1.6rem; accent-color: var(--main); cursor: pointer; }
+    .forgot-link { color: var(--main); text-decoration: none; font-weight: 600; }
+    .forgot-link:hover { text-decoration: underline; }
+
+    .btn-signin {
+      width: 100%;
+      padding: 1.5rem;
+      background: var(--dark);
+      color: #fff;
+      font-family: 'Urbanist', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      letter-spacing: 0.05rem;
+    }
+    .btn-signin:hover { background: var(--main); box-shadow: 0 4px 16px rgba(83,91,242,0.35); }
+    .btn-signin:active { transform: scale(0.98); }
+    .btn-signin:disabled { opacity: 0.65; cursor: not-allowed; }
+    .btn-signin .spinner {
+      width: 1.8rem; height: 1.8rem;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+    .btn-signin.loading .spinner { display: block; }
+    .btn-signin.loading .btn-text { display: none; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Alert messages ── */
+    .alert {
+      padding: 1.2rem 1.6rem;
+      border-radius: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      display: none;
+      align-items: center;
+      gap: 1rem;
+    }
+    .alert.show { display: flex; }
+    .alert-error { background: #fff5f5; color: var(--error); border: 1px solid #fed7d7; }
+    .alert-success { background: #f0fff4; color: var(--success); border: 1px solid #c6f6d5; }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin: 2.4rem 0;
+      color: var(--muted);
+      font-size: 1.3rem;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .signup-link {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--muted);
+      margin-top: 2.4rem;
+    }
+    .signup-link a { color: var(--main); font-weight: 700; text-decoration: none; }
+    .signup-link a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .page-wrapper { grid-template-columns: 1fr; }
+      .left-panel { display: none; }
+      .right-panel { padding: 3.2rem 2.4rem; }
+      .navbar-main nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar-top">
+    <p>Free Shipping · 30-Day Returns · Secure Payments</p>
+    <a href="./sing_up.html">Don't have an account? Sign Up →</a>
+  </div>
+  <div class="navbar-main">
+    <a href="./index.html">
+      <img src="./public/kanha-shore.png" alt="KANHA-STORE" onerror="this.style.display='none'; this.nextSibling.style.display='block'">
+      <span style="display:none; font-family:'Jost',sans-serif; font-size:2rem; font-weight:800; color:#2a2c30;">KANHA-STORE</span>
+    </a>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./product.html">Products</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Page -->
+  <div class="page-wrapper">
+
+    <!-- Left decorative panel -->
+    <div class="left-panel">
+      <div class="left-content">
+        <div class="brand">KANHA-STORE</div>
+        <p>Your destination for cutting-edge gadgets at the best prices.</p>
+        <ul class="left-features">
+          <li><i class="fa-solid fa-check-circle"></i> Free shipping on orders above ₹999</li>
+          <li><i class="fa-solid fa-check-circle"></i> 30-day easy returns & refunds</li>
+          <li><i class="fa-solid fa-check-circle"></i> 100% genuine products</li>
+          <li><i class="fa-solid fa-check-circle"></i> 24/7 customer support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right form panel -->
+    <div class="right-panel">
+      <div class="form-card">
+        <h1>Welcome back 👋</h1>
+        <p class="subtitle">New to KANHA-STORE? <a href="./sing_up.html">Create an account</a></p>
+
+        <!-- Alert box -->
+        <div class="alert alert-error" id="alertBox">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="alertMsg">Something went wrong.</span>
+        </div>
+
+        <!-- Form -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-wrap">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
+            <i class="fa-regular fa-eye toggle-pass" id="togglePass"></i>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="rememberMe"> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button class="btn-signin" id="signInBtn">
+          <span class="btn-text"><i class="fa-solid fa-right-to-bracket"></i> Sign In</span>
+          <div class="spinner"></div>
+        </button>
+
+        <div class="signup-link">
+          Don't have an account? <a href="./sing_up.html">Sign up for free</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const API = 'http://localhost:5000/api';
+
+    // ── Toggle password visibility ────────────────────────────────────────────
+    document.getElementById('togglePass').addEventListener('click', function () {
+      const input = document.getElementById('password');
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      this.className = isPassword
+        ? 'fa-regular fa-eye-slash toggle-pass'
+        : 'fa-regular fa-eye toggle-pass';
+    });
+
+    // ── Show alert ────────────────────────────────────────────────────────────
+    function showAlert(msg, type = 'error') {
+      const box = document.getElementById('alertBox');
+      const msgEl = document.getElementById('alertMsg');
+      box.className = `alert alert-${type} show`;
+      box.querySelector('i').className = type === 'error'
+        ? 'fa-solid fa-circle-exclamation'
+        : 'fa-solid fa-circle-check';
+      msgEl.textContent = msg;
+    }
+    function hideAlert() {
+      document.getElementById('alertBox').classList.remove('show');
+    }
+
+    // ── Sign In ───────────────────────────────────────────────────────────────
+    document.getElementById('signInBtn').addEventListener('click', async () => {
+      hideAlert();
+
+      const email    = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const remember = document.getElementById('rememberMe').checked;
+
+      if (!email || !password) {
+        showAlert('Please enter your email and password.');
+        return;
+      }
+
+      const btn = document.getElementById('signInBtn');
+      btn.classList.add('loading');
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(`${API}/auth/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          showAlert(data.message || 'Login failed. Please try again.');
+          return;
+        }
+
+        // Save token & user
+        const storage = remember ? localStorage : sessionStorage;
+        storage.setItem('kanha_token', data.token);
+        localStorage.setItem('kanha_user', JSON.stringify(data.user));
+
+        showAlert(`Welcome back, ${data.user.name}! Redirecting...`, 'success');
+        setTimeout(() => { window.location.href = './index.html'; }, 1200);
+
+      } catch (err) {
+        showAlert('Cannot connect to server. Make sure the backend is running.');
+      } finally {
+        btn.classList.remove('loading');
+        btn.disabled = false;
+      }
+    });
+
+    // ── Enter key support ─────────────────────────────────────────────────────
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') document.getElementById('signInBtn').click();
+    });
+
+    // ── Redirect if already logged in ─────────────────────────────────────────
+    if (localStorage.getItem('kanha_token') || sessionStorage.getItem('kanha_token')) {
+      window.location.href = './index.html';
+    }
+  </script>
+
+</body>
+</html>
