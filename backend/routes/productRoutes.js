@@ -11,7 +11,7 @@ const {
 
 const { protect, adminOnly } = require("../middleware/authMiddleware");
 
-// ── Public routes ─────────────────────────────────────────────────────────────
+// ── Public routes ────────────────────────────────────────────────────────
 router.get("/",      getAllProducts);   // GET  /api/products
 router.get("/:id",   getProductById);  // GET  /api/products/:id
 
